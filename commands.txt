@@ -1,0 +1,120 @@
+                TERMINAL COMMANDS
+
+CREATE DATABASE databaseName;          =>  create database
+
+DROP DATABASE databaseName;            =>  delete database
+
+\c databaseName;                       =>  connect database
+
+CRAETE TABLE tableName (
+ columnName  columnType                 =>  create table
+);
+
+ALTER TABLE tableName ADD COLUMN column_name column_defination FIRST---adding column first
+
+ALTER TABLE tableName ADD COLUMN column_name column_defination LAST---adding column last
+
+ALTER TABLE tableName ADD COLUMN column_name column_defination LAST;
+                      ADD COLUMN column_name column_defination LAST---adding multilple column last
+
+\d                                       => display tables in DB with realtion or sequence
+
+\dt                                       => display tables
+
+\d tableName                            => see paticular table 
+
+INSERT INTO person (columnName)
+VALUES (columnValue);                   => add data to table
+
+SELECT * FROM tableName                    => display all columns in table
+
+SELECT tableColumnName FROM tableName       => select paticular column
+
+SELECT * FROM tableName ORDER BY tableColumnName    => select all column and sort by column name assending order
+
+SELECT * FROM tableName ORDER BY tableColumnName DESC=> select all column and sort by column name desending order
+
+SELECT DISTINCT tableColumnName FROM tableName  => select  column without duplicates
+
+SELECT * FROM tableName WHERE tableColumnName = "text' ;=> filter data
+
+SELECT * FROM tableName WHERE tableColumnName; = 'text' AND (tableColumnName='text' OR tableColumnName = "text');  => filter data
+
+SELECT * FROM tableName LIMIT 10; =>  display only 10 rows
+
+SELECT * FROM tableName OFFSET 5 LIMIT 10; =>  display only 10 rows with 5 offset
+
+SELECT * FROM tableName OFFSET 5 FETCH FIRST 5 ROW ONLY; =>  display only 10 rows with 5 offset
+
+SELECT * FROM tableName WHERE tableColumnName IN ('value','value','value'); => filter by values
+
+SELECT * FROM tableName WHERE tableColumnName BETWEEN ('value','value','value'); => filter by between values
+
+SELECT * FROM tableName WHERE tableColumnName LIKE '%value'; => search by value
+
+SELECT * FROM tableName WHERE tableColumnName LIKE '%____value'; => search by value
+
+SELECT * FROM tableName WHERE tableColumnName ILIKE 'value%'; => search by value without case sensitive
+
+SELECT tableColumnName,COUNT(*) FROM table GROUP BY tableColumnName ; => get count of columnrepet
+
+SELECT tableColumnName,COUNT(*) FROM table GROUP BY tableColumnName ORDER BY tableColumnName; => get count of column repet with sorting
+
+SELECT tableColumnName,COUNT(*) FROM table GROUP BY tableColumnName ORDER BY tableColumnName; => get count of column repet with sorting
+
+SELECT tableColumnName,COUNT(*) FROM table GROUP BY tableColumnName HAVING COUNT(*) > 10 ORDER BY tableColumnName; => get count of column repet with sorting and count greaterthan 10
+
+SELECT MAX(columnName) FROM table; => max number
+
+SELECT MIN(columnName) FROM table; => min number
+
+SELECT AVG(columnName) FROM table; => average number
+
+SELECT SUM(columnName) FROM table; => total sum
+
+ALTER TABLE Test  
+  CHANGE COLUMN Phone_number Mobile_number  =>rename column
+    varchar(20) NOT NULL;  
+
+ALTER TABLE table_name  DROP COLUMN column_name;   => drop column
+ALTER TABLE table_name  
+DROP COLUMN column_1,  
+DROP COLUMN column_2,    => drop multiple column
+
+ALTER TABLE table_name DROP COLUMN column_name1, column_name2....;   =>drop table
+
+DELETE FROM table_name WHERE Condition_specified;   delete column
+
+UPDATE table_name     
+SET field1=new-value1, field2=new-value2, ...    => update the data
+[WHERE Clause]    
+===================MYSQL===========================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
